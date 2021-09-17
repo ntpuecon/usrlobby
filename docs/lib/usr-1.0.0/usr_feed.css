@@ -1,0 +1,98 @@
+.storyCarousel-holder {
+    width: 100%;
+    top: 0px;
+    position: absolute !important;
+}
+.storyCard-holder {
+  position: relative;
+}
+.story-line {
+  position: absolute;
+  color: black;
+  padding: 1em;
+  line-height: 1.8;
+}
+.story-title {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  font-weight: bold;
+  color: #ffbe09;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #584207;
+  background-color: #ffd560e6;
+  padding-right: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+/* Bottom left text */
+/*
+.story-title {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #584207;
+  font-weight: bold;
+  color: #ffbe09;
+  background-color: #ffd560e6;
+  padding-right: 2px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+*/
+#overlay {
+  position: fixed; /* Sit on top of the page content */
+  display: none; /* Hidden by default */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer; /* Add a pointer on hover */
+}
+
+.container-img {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+/* Bottom left text */
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 16px;
+}
+
+/* Top left text */
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 16px;
+}
+
+/* Top right text */
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Bottom right text */
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 16px;
+}
+
+/* Centered text */
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
