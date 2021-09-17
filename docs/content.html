@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<style>body{background-color:white;}</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="lib/usr-1.0.0/usr_feed.css" rel="stylesheet" />
+<script src="lib/usr-1.0.0/story_telling.js"></script>
+<link id="usr-1-attachment" rel="attachment" href="lib/usr-1.0.0/img/usrmediumqr.jpeg"/>
+<link href="lib/event-1.0.0/event.css" rel="stylesheet" />
+<script src="lib/event-1.0.0/event.js"></script>
+<link href="lib/poster-1.0.0/poster.css" rel="stylesheet" />
+<script src="lib/poster-1.0.0/poster.js"></script>
+
+</head>
+<body>
+<div class="row">
+  <div class="col s12 m6">
+    <div>
+      <div class="card-panel grey lighten-5 z-depth-1" id="story">
+        <div class="row valign-wrapper">
+          <div class="col s12  center-align storyCard-holder" id="storyCard">
+            <img id="storyImg" src="https://cdn-images-1.medium.com/max/1024/0*9gKedvHWosFrYRh9.jpg" alt="" class="responsive-img"/>
+            <h3 id="storyTitle" class="story-title">【USR】社科院USR長青徵文系列之九：北大與我-李淑芬</h3>
+            <div class="storyCarousel-holder">
+              <div id="storyCarousel2" class="carousel carousel-slider story-line">
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">北大位於北大特區內，記得民國86年搬來柑園時，北大特區尚未執行都市重劃，放眼望去，農田、農舍、溝渠、林木交織著，在夏夜時螢火蟲閃閃發光，蛙鳴天籟，走在鄉間小道，還要閃避爬蟲類過馬路，如此情景，已過眼雲煙，現在的北大特區高樓大廈櫛比鱗次，又有台北大學遷移至此，一片欣欣向榮。</h2>
+                </div>
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">台北大學孕育著無數學子，來自四面八方的優秀學子，相聚於此，在人生的青春時期，度過那燦爛美好時光；校園內從文學院開始佇立著，接著一步步各大樓完成，校內設備、景觀更完善，讓更多學子及附近居民受益匪淺。</h2>
+                </div>
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">晨曦時，步入校園，就看到很多團體活動，分布在各角落，有太極拳、外丹功、元極舞等等，熱鬧非凡，讓人目不暇給。而我只喜歡獨自散步著，不管在晨曦或黃昏，校園的美景陪伴著我，春夏秋冬不同景色，讓我在孤寂、落寞、歡喜時，都能找到心靈的慰藉。</h2>
+                </div>
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">另外有次途經運動中心時，發現有人在游泳池游泳，本以為這輩子游泳與我絕緣，讓我驚奇，我竟然在北大學會游泳，只能說“有志者事竟成”。</h2>
+                </div>
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">在游泳時，認識楊姐，因而加入「橘子讀書會」，帶領者的宗旨，這不只是一個聚會，而是一個有溫度的團體，讓“關懷”融化人心，課程內容包羅萬象，有木球、劍道、爬山、健康講座等，都很精采，也很高興有這個機會，讓我發現竟然有打木球的潛能。</h2>
+                </div>
+                <div style="display: none" class="carousel-item valign-wrapper">
+                  <h2 style="background-color: #ffffff57;" class="flow-text story-line">每天站在窗台前，眺望著北大校園，看著它從無到有，一天天茁壯著，無私的奉獻，讓更多學子，附近的居民都能受益，真得很感謝你～北大。</h2>
+                </div>
+              </div>
+              <img style="display: none; padding: 25px;" id="followUsr" class="responsive-img" src="lib/usr-1.0.0/img/usrmediumqr.jpeg"/>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+$(function(){
+    $storyCard = $("#storyCard");
+    $storyEls = $storyCard.children();
+    cardHeight = $storyCard.height();
+    $storyCarousel2 = $("#storyCarousel2");
+
+    M.Carousel.init($storyCarousel2,{
+        fullWidth: true
+    });
+    $storyCarousel = M.Carousel.getInstance($storyCarousel2);
+    $($storyCarousel.el).height(cardHeight);
+    allSlides = $($storyCarousel.el).children();
+    $storyCarousel2.css("height","");
+
+    $followUsr = $("#followUsr");
+    //storyFadeIn();
+    setTimeout(function(){storyFadeIn()}, 8000);
+});</script>
+    </div>
+    <div>
+      <div class="card" style="height: 200px">
+        <div id="card-events" class="carousel carousel-slider">
+          <a class="carousel-item">
+            <div class="speech">
+              <h2 class="center-align" style="color: #005082; font-weight: bold;">測試</h2>
+              <p>
+                <span>
+                  <i class="material-icons event-icon">personal_outline</i>
+                  <span class="item-text">經濟學系</span>
+                </span>
+                <span>
+                  <i class="material-icons event-icon">location_city</i>
+                  <span class="item-text"></span>
+                </span>
+              </p>
+              <p>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">access_time</i>
+                  <span class="item-text">2021-09-24  14:30</span>
+                </td>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">location_on</i>
+                  <span class="item-text">社1F03</span>
+                </td>
+              </p>
+            </div>
+          </a>
+          <a class="carousel-item">
+            <div class="speech">
+              <h2 class="center-align" style="color: #005082; font-weight: bold;">臺北大學學生選課及遠距學習觀察</h2>
+              <p>
+                <span>
+                  <i class="material-icons event-icon">personal_outline</i>
+                  <span class="item-text">林茂廷</span>
+                </span>
+                <span>
+                  <i class="material-icons event-icon">location_city</i>
+                  <span class="item-text">臺北大學經濟學系助理教授</span>
+                </span>
+              </p>
+              <p>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">access_time</i>
+                  <span class="item-text">2022-05-18  10:10am</span>
+                </td>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">location_on</i>
+                  <span class="item-text">三峽校區 社科1F03</span>
+                </td>
+              </p>
+            </div>
+          </a>
+          <a class="carousel-item">
+            <div class="speech">
+              <h2 class="center-align" style="color: #005082; font-weight: bold;">長照2.0社區資源連接服務</h2>
+              <p>
+                <span>
+                  <i class="material-icons event-icon">personal_outline</i>
+                  <span class="item-text">朱若慈</span>
+                </span>
+                <span>
+                  <i class="material-icons event-icon">location_city</i>
+                  <span class="item-text">北大公共托老中心主任</span>
+                </span>
+              </p>
+              <p>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">access_time</i>
+                  <span class="item-text">2022-05-20  15:00pm</span>
+                </td>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">location_on</i>
+                  <span class="item-text">三峽校區 社科2F10 專業教室</span>
+                </td>
+              </p>
+            </div>
+          </a>
+          <a class="carousel-item">
+            <div class="speech">
+              <h2 class="center-align" style="color: #005082; font-weight: bold;">Durkheim、Weber的方法學與犯罪學</h2>
+              <p>
+                <span>
+                  <i class="material-icons event-icon">personal_outline</i>
+                  <span class="item-text">侯崇文(國立臺北大學退休教授)</span>
+                </span>
+                <span>
+                  <i class="material-icons event-icon">location_city</i>
+                  <span class="item-text"></span>
+                </span>
+              </p>
+              <p>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">access_time</i>
+                  <span class="item-text">2022-05-23  09:30am</span>
+                </td>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">location_on</i>
+                  <span class="item-text">台北校區 教學大樓715教室</span>
+                </td>
+              </p>
+            </div>
+          </a>
+          <a class="carousel-item">
+            <div class="speech">
+              <h2 class="center-align" style="color: #005082; font-weight: bold;">我與敘說的無我之道</h2>
+              <p>
+                <span>
+                  <i class="material-icons event-icon">personal_outline</i>
+                  <span class="item-text">陶蕃瀛</span>
+                </span>
+                <span>
+                  <i class="material-icons event-icon">location_city</i>
+                  <span class="item-text">靜宜大學社會工作與兒童少年福利學系副教授</span>
+                </span>
+              </p>
+              <p>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">access_time</i>
+                  <span class="item-text">2022-05-27  13:10pm</span>
+                </td>
+                <td class="event-icon">
+                  <i class="material-icons event-icon">location_on</i>
+                  <span class="item-text">三峽校區 社科2F10</span>
+                </td>
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col s12 m6" style="padding-top: 30px;">
+    <div id="poster-carousel" class="carousel carousel-slider center" style="min-height: 700px;"></div>
+  </div>
+</div>
+</body>
+</html>
