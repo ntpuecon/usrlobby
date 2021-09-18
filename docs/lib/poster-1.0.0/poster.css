@@ -1,0 +1,14 @@
+.poster-item {
+  margin-top: 10px;
+}
+.carousel .indicators .indicator-item.active {
+  background-color: #bf360c !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #584207;
+}
+.carousel .indicators .indicator-item {
+  background-color: #ffccbc !important;
+  margin-bottom: 10px !important;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #584207;
+}
