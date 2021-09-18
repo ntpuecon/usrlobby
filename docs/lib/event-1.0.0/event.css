@@ -16,7 +16,7 @@ body {
   padding: 10px 20px 90px 20px;
 }
 .event-icon {
-  width: 50px;
+  width: 30px;
 }
 .speech {
   padding-left: 50px;
@@ -24,4 +24,6 @@ body {
 }
 .item-text {
   font-size: 1.2em;
+  padding-right: 1.2em;
+  color: #005082;
 }
